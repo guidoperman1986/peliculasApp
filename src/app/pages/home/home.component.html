@@ -1,0 +1,29 @@
+<div id="tabs" class="row animate__animated animate__fadeIn animate__delay-1s">
+    <h1 [class.selected]="pantalla == 'now'" ngClass="{ selected:  }" class="tab cursor" (click)="mostrar('now')">Now Playing</h1>
+    <h1 [class.selected]="pantalla == 'top'" ngClass="{ selected:  }" class="tab pl-3 cursor" (click)="mostrar('top')">Top Rated</h1>
+
+</div>
+
+<div id="now" class="row animate__animated animate__fadeIn animate__delay-1s" *ngIf="movies.length > 0 && pantalla=='now'">
+    <div class="col">
+        <app-slideshow [movies]="movies"></app-slideshow>
+
+    </div>
+</div>
+
+<div id="now" class="row mt-5" *ngIf="pantalla=='now'">
+    <div>
+        <h1 class="animate__animated animate__fadeIn animate__delay-1s">Movies</h1>        
+    </div>
+    
+    <app-peliculas-poster-grid *ngIf="movies.length > 0" [movies]="movies"></app-peliculas-poster-grid>
+</div>
+
+<div id="top" *ngIf="pantalla=='top'">
+    <app-peliculas-poster-grid *ngIf="movies.length > 0" [movies]="topMovies.results"></app-peliculas-poster-grid>
+</div>
+
+<div class="animate__animated animate__fadeIn animate__delay-1s boton-subir" *ngIf="scroll">
+    <i class="fas fa-arrow-up fa-2x" (click)="getToTheTop()"></i>
+    
+</div>

@@ -1,0 +1,40 @@
+.cursor{
+    cursor: pointer;
+}
+
+.visible{
+    display: inline;
+}
+
+.invisible{
+    display: none;
+}
+
+.boton-subir{
+    position: fixed; 
+    color:#fff; 
+    bottom: 25px; 
+    right: 45px;
+}
+
+#now h1{
+    margin-left: 10px;
+}
+
+.selected{
+    color: #BD4C5F;
+}
+
+#tabs{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.tab{
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.tab:hover{    
+    color: #BD4C5F;    
+}
